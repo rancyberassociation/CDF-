@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== SEO মেটা ট্যাগ ===== -->
+    <title>ক্যাপ্টেন ইমরান আহম্মেদ | সাইবার ডিফেন্স ফোর্স | অফিসিয়াল পোর্টফোলিও</title>
+    <meta name="description" content="সাইবার ডিফেন্স ফোর্সের অফিসিয়াল পোর্টফোলিও। সাইবার সিকিউরিটি বিশেষজ্ঞ ক্যাপ্টেন ইমরান আহম্মেদের পেশাদার পরিচয়।" />
+    <meta name="keywords" content="ক্যাপ্টেন ইমরান আহম্মেদ, সাইবার সিকিউরিটি, সাইবার ডিফেন্স ফোর্স" />
+    <meta name="author" content="ক্যাপ্টেন ইমরান আহম্মেদ - সাইবার ডিফেন্স ফোর্স" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="ক্যাপ্টেন ইমরান আহম্মেদ | সাইবার ডিফেন্স ফোর্স" />
+    <meta property="og:description" content="জাতীয় সাইবার নিরাপত্তা বিভাগের সাইবার সিকিউরিটি বিশেষজ্ঞের অফিসিয়াল পোর্টফোলিও।" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#050a15" />
+
+    <!-- ===== ফেভিকন ===== -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ================================================================
+                   সাইবার ডিফেন্স ফোর্স - আল্ট্রা প্রফেশনাল থিম
+                   ================================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #050a15;
+            --primary-mid: #0a1628;
+            --primary-light: #0f1f3a;
+            --accent-cyan: #00e5ff;
+            --accent-gold: #ffd700;
+            --accent-red: #ff1744;
+            --accent-green: #00e676;
+            --text-primary: #e8f0fe;
+            --text-secondary: #8aa3c9;
+            --border-glow: rgba(0, 229, 255, 0.12);
+            --shadow-glow: 0 0 60px rgba(0, 229, 255, 0.04);
+            --radius: 6px;
+            --transition: 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            background-image:
+                radial-gradient(ellipse at 10% 20%, rgba(0, 229, 255, 0.025) 0%, transparent 60%),
+                radial-gradient(ellipse at 90% 80%, rgba(255, 215, 0, 0.015) 0%, transparent 50%),
+                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0, 229, 255, 0.015) 39px, rgba(0, 229, 255, 0.015) 40px),
+                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0, 229, 255, 0.015) 39px, rgba(0, 229, 255, 0.015) 40px);
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 30% 40%, rgba(0, 229, 255, 0.015), transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 215, 0, 0.01), transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+            animation: pulseBg 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseBg {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* ================================================================
+                   লোডিং অ্যানিমেশন (ওপেনিং ইফেক্ট)
+                   ================================================================ */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: var(--primary-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-shield {
+            width: 100px;
+            height: 100px;
+            animation: loaderSpin 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+            filter: drop-shadow(0 0 60px rgba(0, 229, 255, 0.15));
+        }
+
+        @keyframes loaderSpin {
+            0% { transform: rotate(0deg) scale(0.9); opacity: 0.5; }
+            50% { transform: rotate(180deg) scale(1.1); opacity: 1; }
+            100% { transform: rotate(360deg) scale(0.9); opacity: 0.5; }
+        }
+
+        .loader-shield svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader-text {
+            margin-top: 25px;
+            font-family: 'Orbitron', monospace;
+            font-size: 14px;
+            color: var(--accent-cyan);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: loaderTextFade 1.5s ease 0.5s forwards;
+        }
+
+        @keyframes loaderTextFade {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 0.8; transform: translateY(0); }
+        }
+
+        .loader-dots {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .loader-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            animation: dotBounce 1.2s ease-in-out infinite;
+        }
+
+        .loader-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .loader-dots span:nth-child(3) { animation-delay: 0.4s; }
+        .loader-dots span:nth-child(4) { animation-delay: 0.6s; }
+        .loader-dots span:nth-child(5) { animation-delay: 0.8s; }
+
+        @keyframes dotBounce {
+            0%, 80%, 100% { transform: scale(0.5); opacity: 0.2; }
+            40% { transform: scale(1.2); opacity: 1; }
+        }
+
+        /* ===== কন্টেন্ট ফেইড-ইন ===== */
+        .content-wrapper {
+            opacity: 0;
+            animation: contentFadeIn 1.2s ease 2.2s forwards;
+        }
+
+        @keyframes contentFadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ================================================================
+                   বাকি স্টাইল (আগের মতোই)
+                   ================================================================ */
+        .top-secret-badge {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            background: rgba(255, 23, 68, 0.06);
+            border: 1px solid rgba(255, 23, 68, 0.2);
+            padding: 4px 14px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--accent-red);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            z-index: 999;
+            animation: blinkRed 2.5s ease-in-out infinite;
+            font-family: 'Orbitron', monospace;
+        }
+
+        @keyframes blinkRed {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.15; }
+        }
+
+        .gov-header {
+            background: linear-gradient(180deg, rgba(5, 10, 21, 0.98), rgba(10, 22, 40, 0.94));
+            border-bottom: 1px solid rgba(0, 229, 255, 0.08);
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 2px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .gov-header .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .gov-header .logo .logo-shield {
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+            filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.12));
+            animation: logoPulse 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoPulse {
+            0% { filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.08)); }
+            100% { filter: drop-shadow(0 0 50px rgba(0, 229, 255, 0.2)); }
+        }
+
+        .gov-header .logo .logo-shield svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .gov-header .logo .brand-text {
+            line-height: 1.2;
+        }
+
+        .gov-header .logo .brand-text .title {
+            font-family: 'Orbitron', monospace;
+            font-size: 17px;
+            font-weight: 900;
+            color: var(--text-primary);
+            letter-spacing: 3px;
+            text-shadow: 0 0 40px rgba(0, 229, 255, 0.05);
+        }
+
+        .gov-header .logo .brand-text .title .highlight {
+            color: var(--accent-cyan);
+        }
+
+        .gov-header .logo .brand-text .subtitle {
+            font-size: 10px;
+            color: var(--text-secondary);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .gov-header .badge-area {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .gov-header .clearance {
+            font-size: 10px;
+            color: var(--accent-gold);
+            border: 1px solid rgba(255, 215, 0, 0.12);
+            padding: 3px 14px;
+            border-radius: 3px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            background: rgba(255, 215, 0, 0.03);
+            font-family: 'Orbitron', monospace;
+        }
+
+        .gov-header .status-dot {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .gov-header .status-dot .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            animation: pulseDot 1.8s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(0, 230, 118, 0.2);
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.6); }
+        }
+
+        .cyber-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            color: var(--accent-cyan);
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 1px;
+            background: rgba(0, 229, 255, 0.04);
+            border: 1px solid rgba(0, 229, 255, 0.06);
+            padding: 3px 12px;
+            border-radius: 3px;
+        }
+
+        .cyber-badge i {
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 25px auto;
+            padding: 0 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .official-seal {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .official-seal .seal-icon {
+            font-size: 32px;
+            color: var(--accent-gold);
+            opacity: 0.08;
+            letter-spacing: 16px;
+        }
+
+        .official-seal .seal-text {
+            font-size: 10px;
+            color: var(--text-secondary);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 300;
+            opacity: 0.6;
+        }
+
+        .profile-card {
+            background: linear-gradient(145deg, rgba(10, 22, 40, 0.92), rgba(5, 10, 21, 0.96));
+            border: 1px solid var(--border-glow);
+            border-radius: var(--radius);
+            padding: 35px;
+            box-shadow: var(--shadow-glow), inset 0 0 80px rgba(0, 229, 255, 0.015);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '◆ CLASSIFIED ◆';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            font-size: 50px;
+            color: rgba(0, 229, 255, 0.015);
+            font-weight: 900;
+            transform: rotate(15deg);
+            pointer-events: none;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .profile-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 229, 255, 0.01), transparent 50%);
+            pointer-events: none;
+        }
+
+        .profile-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            align-items: flex-start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-left {
+            flex: 0 0 200px;
+            text-align: center;
+        }
+
+        .profile-left .photo-frame {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 12px;
+        }
+
+        .profile-left .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+            border: 2px solid rgba(0, 229, 255, 0.15);
+            box-shadow: 0 0 60px rgba(0, 229, 255, 0.04);
+            filter: grayscale(15%) contrast(1.05);
+            transition: var(--transition);
+        }
+
+        .profile-left .photo-frame img:hover {
+            filter: grayscale(0%) contrast(1.1);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 80px rgba(0, 229, 255, 0.08);
+        }
+
+        .profile-left .photo-frame .rank-badge {
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-dark);
+            border: 1.5px solid var(--accent-gold);
+            padding: 3px 18px;
+            border-radius: 3px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            letter-spacing: 3px;
+            font-family: 'Orbitron', monospace;
+            white-space: nowrap;
+            background: rgba(5, 10, 21, 0.96);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.05);
+        }
+
+        .profile-left .id-number {
+            margin-top: 16px;
+            font-size: 10px;
+            color: var(--text-secondary);
+            letter-spacing: 3px;
+            font-family: 'Orbitron', monospace;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            padding-top: 12px;
+        }
+
+        .profile-left .id-number span {
+            color: var(--accent-cyan);
+        }
+
+        .profile-right {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .profile-right .name-title {
+            margin-bottom: 16px;
+        }
+
+        .profile-right .name-title h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 30px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+
+        .profile-right .name-title .designation {
+            font-size: 15px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-top: 2px;
+            opacity: 0.9;
+        }
+
+        .profile-right .name-title .designation i {
+            margin-right: 8px;
+        }
+
+        .profile-right .clearance-level {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.04);
+            border: 1px solid rgba(255, 215, 0, 0.08);
+            padding: 3px 16px;
+            border-radius: 3px;
+            font-size: 11px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin: 6px 0 14px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .info-grid-gov {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 8px 25px;
+            margin: 14px 0 20px;
+            padding: 14px 16px;
+            background: rgba(0, 0, 0, 0.15);
+            border-left: 2px solid var(--accent-cyan);
+        }
+
+        .info-grid-gov .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        .info-grid-gov .item i {
+            color: var(--accent-cyan);
+            width: 18px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+        .info-grid-gov .item .label {
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-grid-gov .item .value {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .clearance-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 14px;
+            background: rgba(0, 229, 255, 0.02);
+            border: 1px solid rgba(0, 229, 255, 0.04);
+            border-radius: 3px;
+            margin: 12px 0 16px;
+            flex-wrap: wrap;
+        }
+
+        .clearance-bar .bar-label {
+            font-size: 10px;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .clearance-bar .bar-track {
+            flex: 1;
+            min-width: 100px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .clearance-bar .bar-track .bar-fill {
+            height: 100%;
+            width: 94%;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-gold));
+            border-radius: 10px;
+            animation: loadBar 2s ease-out;
+        }
+
+        @keyframes loadBar {
+            0% { width: 0; }
+            100% { width: 94%; }
+        }
+
+        .clearance-bar .bar-percent {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            font-family: 'Orbitron', monospace;
+        }
+
+        .skills-progress {
+            margin: 16px 0 20px;
+            padding: 16px 18px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .skills-progress .section-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .skills-progress .section-label span {
+            font-family: 'Orbitron', monospace;
+            font-size: 11px;
+            color: var(--accent-cyan);
+            letter-spacing: 2px;
+        }
+
+        .skills-progress .section-label .update-tag {
+            font-size: 9px;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+        }
+
+        .skill-progress-item {
+            margin-bottom: 12px;
+        }
+
+        .skill-progress-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-progress-item .skill-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 3px;
+        }
+
+        .skill-progress-item .skill-info .skill-name {
+            color: var(--text-primary);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .skill-progress-item .skill-info .skill-name i {
+            color: var(--accent-cyan);
+            font-size: 13px;
+        }
+
+        .skill-progress-item .skill-info .skill-percent {
+            color: var(--accent-cyan);
+            font-weight: 700;
+            font-family: 'Orbitron', monospace;
+            font-size: 11px;
+        }
+
+        .skill-progress-item .progress-track {
+            width: 100%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-progress-item .progress-track .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-gold));
+            width: 0%;
+            position: relative;
+            transition: width 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.06);
+        }
+
+        .skill-progress-item .progress-track .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 2.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .section-gov {
+            margin-top: 30px;
+        }
+
+        .section-gov .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(0, 229, 255, 0.05);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+
+        .section-gov .section-header i {
+            color: var(--accent-cyan);
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        .section-gov .section-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--text-primary);
+        }
+
+        .section-gov .section-header .ref {
+            margin-left: auto;
+            font-size: 9px;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+            font-family: 'Orbitron', monospace;
+            opacity: 0.5;
+        }
+
+        .skills-gov {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skills-gov .skill {
+            background: rgba(0, 229, 255, 0.03);
+            border: 1px solid rgba(0, 229, 255, 0.04);
+            padding: 4px 14px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .skills-gov .skill i {
+            color: var(--accent-cyan);
+            font-size: 12px;
+        }
+
+        .skills-gov .skill:hover {
+            background: rgba(0, 229, 255, 0.06);
+            border-color: rgba(0, 229, 255, 0.12);
+            transform: translateY(-1px);
+        }
+
+        .project-grid-gov {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+        }
+
+        .project-card-gov {
+            background: rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card-gov::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 229, 255, 0.01), transparent);
+            pointer-events: none;
+        }
+
+        .project-card-gov:hover {
+            border-color: rgba(0, 229, 255, 0.08);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card-gov .op-code {
+            font-family: 'Orbitron', monospace;
+            font-size: 9px;
+            color: var(--accent-red);
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+            opacity: 0.4;
+        }
+
+        .project-card-gov i {
+            font-size: 24px;
+            color: var(--accent-cyan);
+            margin-bottom: 6px;
+            opacity: 0.8;
+        }
+
+        .project-card-gov h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .project-card-gov p {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .project-card-gov .status-tag {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 9px;
+            padding: 2px 10px;
+            border-radius: 3px;
+            background: rgba(0, 230, 118, 0.05);
+            color: var(--accent-green);
+            border: 1px solid rgba(0, 230, 118, 0.06);
+            letter-spacing: 1px;
+        }
+
+        .gov-footer {
+            margin-top: 35px;
+            padding: 16px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gov-footer .copyright {
+            font-size: 11px;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            text-align: center;
+            opacity: 0.5;
+        }
+
+        .gov-footer .copyright i {
+            color: var(--accent-red);
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .gov-header {
+                padding: 10px 16px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            .gov-header .badge-area {
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .top-secret-badge {
+                display: none;
+            }
+            .profile-left {
+                flex: 1 1 100%;
+            }
+            .profile-left .photo-frame {
+                width: 140px;
+                height: 140px;
+            }
+            .profile-grid {
+                gap: 18px;
+            }
+            .profile-card {
+                padding: 18px;
+            }
+            .info-grid-gov {
+                grid-template-columns: 1fr;
+                padding: 10px 14px;
+            }
+            .project-grid-gov {
+                grid-template-columns: 1fr 1fr;
+            }
+            .profile-right .name-title h1 {
+                font-size: 22px;
+            }
+            .gov-header .logo .logo-shield {
+                width: 44px;
+                height: 44px;
+            }
+            .gov-header .logo .brand-text .title {
+                font-size: 14px;
+            }
+            .loader-shield {
+                width: 70px;
+                height: 70px;
+            }
+            .loader-text {
+                font-size: 11px;
+                letter-spacing: 4px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            .project-grid-gov {
+                grid-template-columns: 1fr;
+            }
+            .gov-header .logo .brand-text .title {
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+            .clearance-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .gov-header .logo .logo-shield {
+                width: 38px;
+                height: 38px;
+            }
+            .profile-left .photo-frame {
+                width: 120px;
+                height: 120px;
+            }
+            .profile-right .name-title h1 {
+                font-size: 18px;
+            }
+            .loader-shield {
+                width: 60px;
+                height: 60px;
+            }
+            .loader-text {
+                font-size: 10px;
+                letter-spacing: 3px;
+            }
+            .loader-dots span {
+                width: 6px;
+                height: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================================================================
+    লোডিং অ্যানিমেশন (ওপেনিং ইফেক্ট)
+    ================================================================ -->
+    <div id="loader">
+        <div class="loader-shield">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="loaderShieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0.9" />
+                        <stop offset="100%" style="stop-color:#0066cc;stop-opacity:0.9" />
+                    </linearGradient>
+                    <linearGradient id="loaderInnerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#0a1628;stop-opacity:0.9" />
+                        <stop offset="100%" style="stop-color:#050a15;stop-opacity:0.95" />
+                    </linearGradient>
+                </defs>
+                <path d="M60 8 L108 26 L108 52 C108 82 86 106 60 116 C34 106 12 82 12 52 L12 26 L60 8 Z"
+                fill="url(#loaderInnerGrad)" stroke="url(#loaderShieldGrad)" stroke-width="2.5"/>
+                <path d="M60 16 L100 31 L100 52 C100 78 82 100 60 108 C38 100 20 78 20 52 L20 31 L60 16 Z"
+                fill="none" stroke="rgba(0,229,255,0.12)" stroke-width="1"/>
+                <circle cx="60" cy="58" r="22" fill="none" stroke="rgba(0,229,255,0.08)" stroke-width="1" stroke-dasharray="3 3"/>
+                <circle cx="60" cy="58" r="14" fill="none" stroke="rgba(0,229,255,0.12)" stroke-width="1"/>
+                <g transform="translate(60,56)">
+                    <polygon points="-10,-14 -8,-18 8,-18 10,-14 12,-8 8,-2 4,4 0,8 -4,4 -8,-2 -12,-8" fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0.6"/>
+                    <polygon points="-6,-12 -5,-15 5,-15 6,-12 7,-8 5,-4 3,2 0,5 -3,2 -5,-4 -7,-8" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.3"/>
+                </g>
+                <path d="M45 30 L50 24 L55 30 L60 22 L65 30 L70 24 L75 30"
+                fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0.4"/>
+                <line x1="24" y1="40" x2="24" y2="50" stroke="#00e5ff" stroke-width="1" opacity="0.15"/>
+                <line x1="96" y1="40" x2="96" y2="50" stroke="#00e5ff" stroke-width="1" opacity="0.15"/>
+                <line x1="22" y1="65" x2="22" y2="75" stroke="#00e5ff" stroke-width="1" opacity="0.15"/>
+                <line x1="98" y1="65" x2="98" y2="75" stroke="#00e5ff" stroke-width="1" opacity="0.15"/>
+                <text x="60" y="90" text-anchor="middle" font-size="8" fill="#00e5ff" font-family="Orbitron, monospace" font-weight="700" letter-spacing="2" opacity="0.5">CDF</text>
+                <circle cx="35" cy="35" r="1.5" fill="#00e5ff" opacity="0.15"/>
+                <circle cx="85" cy="35" r="1.5" fill="#00e5ff" opacity="0.15"/>
+                <circle cx="35" cy="82" r="1.5" fill="#00e5ff" opacity="0.15"/>
+                <circle cx="85" cy="82" r="1.5" fill="#00e5ff" opacity="0.15"/>
+            </svg>
+        </div>
+        <div class="loader-text">সিকিউরিং কানেকশন</div>
+        <div class="loader-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- ================================================================
+    মূল কন্টেন্ট (ফেইড-ইন হবে)
+    ================================================================ -->
+    <div class="content-wrapper">
+
+        <!-- ===== টপ সিক্রেট ব্যাজ ===== -->
+        <div class="top-secret-badge">◆ TOP SECRET ◆</div>
+
+        <!-- ===== হেডার ===== -->
+        <header class="gov-header">
+            <div class="logo">
+                <div class="logo-shield">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0.9" />
+                                <stop offset="100%" style="stop-color:#0066cc;stop-opacity:0.9" />
+                            </linearGradient>
+                            <linearGradient id="innerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0a1628;stop-opacity:0.9" />
+                                <stop offset="100%" style="stop-color:#050a15;stop-opacity:0.95" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M60 8 L108 26 L108 52 C108 82 86 106 60 116 C34 106 12 82 12 52 L12 26 L60 8 Z"
+                        fill="url(#innerGrad)" stroke="url(#shieldGrad)" stroke-width="2.5"/>
+                        <path d="M60 16 L100 31 L100 52 C100 78 82 100 60 108 C38 100 20 78 20 52 L20 31 L60 16 Z"
+                        fill="none" stroke="rgba(0,229,255,0.12)" stroke-width="1"/>
+                        <circle cx="60" cy="58" r="22" fill="none" stroke="rgba(0,229,255,0.08)" stroke-width="1" stroke-dasharray="3 3"/>
+                        <circle cx="60" cy="58" r="14" fill="none" stroke="rgba(0,229,255,0.12)" stroke-width="1"/>
+                        <g transform="translate(60,56)">
+                            <polygon points="-10,-14 -8,-18 8,-18 10,-14 12,-8 8,-2 4,4 0,8 -4,4 -8,-2 -12,-8" fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0.6"/>
+                            <polygon points="-6,-12 -5,-15 5,-15 6,-12 7,-8 5,-4 3,2 0,5 -3,2 -5,-4 -7,-8" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.3"/>
+                        </g>
+                        <path d="M45 30 L50 24 L55 30 L60 22 L65 30 L70 24 L75 30"
+                        fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0.4"/>
+                        <line x1="24" y1="40" x2="24" y2="50" stroke="#00e5ff" stroke-width="1" opacity="0.15"/>
+                        <line x1="96" y1="40" x2="96" y2="50" stroke="#00e5ff" stroke-width="1" opacity="0.15"/>
+                        <line x1="22" y1="65" x2="22" y2="75" stroke="#00e5ff" stroke-width="1" opacity="0.15"/>
+                        <line x1="98" y1="65" x2="98" y2="75" stroke="#00e5ff" stroke-width="1" opacity="0.15"/>
+                        <text x="60" y="90" text-anchor="middle" font-size="8" fill="#00e5ff" font-family="Orbitron, monospace" font-weight="700" letter-spacing="2" opacity="0.5">CDF</text>
+                        <circle cx="35" cy="35" r="1.5" fill="#00e5ff" opacity="0.15"/>
+                        <circle cx="85" cy="35" r="1.5" fill="#00e5ff" opacity="0.15"/>
+                        <circle cx="35" cy="82" r="1.5" fill="#00e5ff" opacity="0.15"/>
+                        <circle cx="85" cy="82" r="1.5" fill="#00e5ff" opacity="0.15"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <div class="title">সাইবার <span class="highlight">ডিফেন্স</span> ফোর্স</div>
+                    <div class="subtitle">জাতীয় সাইবার নিরাপত্তা বিভাগ</div>
+                </div>
+            </div>
+
+            <div class="badge-area">
+                <div class="cyber-badge">
+                    <i class="fas fa-shield-halved"></i>
+                    <span>CDF</span>
+                </div>
+                <div class="clearance">✦ আল্ট্রা</div>
+                <div class="status-dot">
+                    <span class="dot"></span>
+                    <span>সক্রিয় ২৪/৭</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== মূল কন্টেন্ট ===== -->
+        <div class="container">
+
+            <div class="official-seal">
+                <div class="seal-icon">⬡ ⬢ ⬡</div>
+                <div class="seal-text">বাংলাদেশ সাইবার সিকিউরিটি এজেন্সি · অফিসিয়াল রেকর্ড</div>
+            </div>
+
+            <!-- ===== প্রোফাইল কার্ড ===== -->
+            <div class="profile-card">
+                <div class="profile-grid">
+
+                    <div class="profile-left">
+                        <div class="photo-frame">
+                            <!-- ===== লোকাল ইমেজ (profile.jpg) ===== -->
+                            <img src="profile.jpg" alt="ক্যাপ্টেন ইমরান আহম্মেদ" />
+                            <div class="rank-badge">✦ ক্যাপ্টেন</div>
+                        </div>
+                        <div class="id-number">
+                            <i class="fas fa-id-card"></i> আইডি: <span>CDF-০৯৪৭-ব্রাভো</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-right">
+                        <div class="name-title">
+                            <h1>ক্যাপ্টেন ইমরান আহম্মেদ</h1>
+                            <div class="designation">
+                                <i class="fas fa-user-shield"></i> সাইবার ডিফেন্স স্পেশালিস্ট
+                            </div>
+                        </div>
+
+                        <div class="clearance-level">
+                            <i class="fas fa-lock"></i> ক্লিয়ারেন্স: গোল্ড (টপ সিক্রেট)
+                        </div>
+
+                        <div class="info-grid-gov">
+                            <div class="item">
+                                <i class="fas fa-building"></i>
+                                <span><span class="label">ইউনিট</span><br /><span class="value">সাইবার ডিফেন্স ডিভিশন</span></span>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span><span class="label">হেডকোয়ার্টার</span><br /><span class="value">ঢাকা, বাংলাদেশ</span></span>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-envelope"></i>
+                                <span><span class="label">অফিসিয়াল ইমেইল</span><br /><span class="value">imran@cdf.gov.bd</span></span>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span><span class="label">হটলাইন</span><br /><span class="value">+৮৮০ ১৭০০-০০০০০০</span></span>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span><span class="label">যোগদান</span><br /><span class="value">১৫ জানুয়ারি, ২০২০</span></span>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-trophy"></i>
+                                <span><span class="label">অপারেশন</span><br /><span class="value">২৭টি সফল মিশন</span></span>
+                            </div>
+                        </div>
+
+                        <!-- ===== অ্যানিমেটেড স্কিল প্রগ্রেস ===== -->
+                        <div class="skills-progress">
+                            <div class="section-label">
+                                <span><i class="fas fa-chart-line"></i> কোর দক্ষতা</span>
+                                <span class="update-tag"><i class="fas fa-arrow-up" style="color:#00e676;"></i> আপডেটেড</span>
+                            </div>
+
+                            <div class="skill-progress-item">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fas fa-shield-halved"></i> সাইবার ফরেনসিক</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" data-width="92"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-progress-item">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fas fa-lock"></i> ক্রিপ্টোগ্রাফি</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" data-width="88"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-progress-item">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fas fa-code"></i> সিকিউর কোডিং</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" data-width="95"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-progress-item">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fas fa-network-wired"></i> নেটওয়ার্ক ডিফেন্স</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" data-width="85"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-progress-item">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fas fa-robot"></i> এআই থ্রেট ডিটেকশন</span>
+                                    <span class="skill-percent">78%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" data-width="78"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearance-bar">
+                            <span class="bar-label"><i class="fas fa-shield"></i> সিকিউরিটি ক্লিয়ারেন্স</span>
+                            <div class="bar-track">
+                                <div class="bar-fill"></div>
+                            </div>
+                            <span class="bar-percent">৯৪%</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ===== দক্ষতা সেকশন ===== -->
+            <div class="section-gov">
+                <div class="section-header">
+                    <i class="fas fa-microchip"></i>
+                    <h2>অপারেশনাল দক্ষতা</h2>
+                    <span class="ref">REF: CDF-SK-২০২৬</span>
+                </div>
+                <div class="skills-gov">
+                    <span class="skill"><i class="fas fa-shield-halved"></i> সাইবার ফরেনসিক</span>
+                    <span class="skill"><i class="fas fa-lock"></i> ক্রিপ্টোগ্রাফি</span>
+                    <span class="skill"><i class="fas fa-code"></i> সিকিউর কোডিং</span>
+                    <span class="skill"><i class="fas fa-database"></i> পেনিট্রেশন টেস্টিং</span>
+                    <span class="skill"><i class="fas fa-cloud"></i> ক্লাউড সিকিউরিটি</span>
+                    <span class="skill"><i class="fas fa-network-wired"></i> নেটওয়ার্ক ডিফেন্স</span>
+                    <span class="skill"><i class="fas fa-robot"></i> এআই থ্রেট ডিটেকশন</span>
+                    <span class="skill"><i class="fas fa-fingerprint"></i> বায়োমেট্রিক সিকিউরিটি</span>
+                </div>
+            </div>
+
+            <!-- ===== প্রোজেক্ট গ্যালারি ===== -->
+            <div class="section-gov">
+                <div class="section-header">
+                    <i class="fas fa-folder-open"></i>
+                    <h2>অপারেশন আর্কাইভ</h2>
+                    <span class="ref">CLASSIFIED · CDF-OP-২০২৬</span>
+                </div>
+                <div class="project-grid-gov">
+                    <div class="project-card-gov">
+                        <div class="op-code">◆ OP-আলফা-৭</div>
+                        <i class="fas fa-shield-halved"></i>
+                        <h4>সাইবার শিল্ড</h4>
+                        <p>ন্যাশনাল ফায়ারওয়াল সিস্টেম</p>
+                        <div class="status-tag"><i class="fas fa-check-circle"></i> সক্রিয়</div>
+                    </div>
+                    <div class="project-card-gov">
+                        <div class="op-code">◆ OP-ব্রাভো-৩</div>
+                        <i class="fas fa-robot"></i>
+                        <h4>এআই থ্রেট হান্টার</h4>
+                        <p>মেশিন লার্নিং ভিত্তিক অনুপ্রবেশ সনাক্তকরণ</p>
+                        <div class="status-tag"><i class="fas fa-check-circle"></i> সক্রিয়</div>
+                    </div>
+                    <div class="project-card-gov">
+                        <div class="op-code">◆ OP-চার্লি-৯</div>
+                        <i class="fas fa-lock"></i>
+                        <h4>কোয়ান্টাম ক্রিপ্টো</h4>
+                        <p>পোস্ট-কোয়ান্টাম এনক্রিপশন ফ্রেমওয়ার্ক</p>
+                        <div class="status-tag"><i class="fas fa-spinner"></i> উন্নয়নাধীন</div>
+                    </div>
+                    <div class="project-card-gov">
+                        <div class="op-code">◆ OP-ডেল্টা-২</div>
+                        <i class="fas fa-cloud"></i>
+                        <h4>ক্লাউড ডিফেন্স গ্রিড</h4>
+                        <p>ডিস্ট্রিবিউটেড ক্লাউড মনিটরিং</p>
+                        <div class="status-tag"><i class="fas fa-check-circle"></i> সক্রিয়</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== ফুটার ===== -->
+            <footer class="gov-footer">
+                <div class="copyright">
+                    <i class="fas fa-shield-halved"></i> © ২০২৬ সাইবার ডিফেন্স ফোর্স · সর্বস্বত্ব সংরক্ষিত
+                </div>
+            </footer>
+
+        </div>
+
+    </div><!-- /content-wrapper -->
+
+    <!-- ================================================================
+    জাভাস্ক্রিপ্ট
+    ================================================================ -->
+    <script>
+        // ===== লোডার হাইড করা =====
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loader').classList.add('hidden');
+            }, 2500);
+        });
+
+        setTimeout(function() {
+            const loader = document.getElementById('loader');
+            if (!loader.classList.contains('hidden')) {
+                loader.classList.add('hidden');
+            }
+        }, 3500);
+
+        console.log("🛡️ ক্যাপ্টেন ইমরান আহম্মেদ - সাইবার ডিফেন্স ফোর্স লোড হয়েছে!");
+        console.log("🔒 ক্লাসিফাইড তথ্য। অননুমোদিত অ্যাক্সেস নিষিদ্ধ।");
+
+        // ===== অ্যানিমেটেড প্রগ্রেস বার =====
+        function animateProgressBars() {
+            const fills = document.querySelectorAll('.progress-fill');
+            fills.forEach((fill, index) => {
+                const targetWidth = parseInt(fill.getAttribute('data-width'));
+                setTimeout(() => {
+                    fill.style.width = targetWidth + '%';
+                }, index * 150);
+            });
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateProgressBars();
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.25 });
+
+        const progressSection = document.querySelector('.skills-progress');
+        if (progressSection) {
+            observer.observe(progressSection);
+        }
+
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const fills = document.querySelectorAll('.progress-fill');
+                let hasAnimated = false;
+                fills.forEach(fill => {
+                    if (fill.style.width !== '0%' && fill.style.width !== '') {
+                        hasAnimated = true;
+                    }
+                });
+                if (!hasAnimated) {
+                    animateProgressBars();
+                }
+            }, 2800);
+        });
+
+        // ===== ইস্টার এগ =====
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                console.log('🛡️ অ্যাক্সেস অস্বীকৃত!');
+            }
+            if (e.ctrlKey && e.shiftKey && (e.key === 'C' || e.key === 'I')) {
+                console.log('%c🔒 এই সাইটটি সুরক্ষিত। অননুমোদিত অ্যাক্সেস নিষিদ্ধ!', 'color: #ff1744; font-size: 14px; font-weight: bold;');
+            }
+        });
+
+        console.log('%c🛡️ সাইবার ডিফেন্স ফোর্স - অফিসিয়াল পোর্টফোলিও', 'color: #00e5ff; font-size: 16px; font-weight: bold;');
+        console.log('%c🔐 নিরাপত্তা সতর্কতা: এই তথ্য ক্লাসিফাইড', 'color: #ffd700; font-size: 13px;');
+    </script>
+
+</body>
+</html>
